@@ -1,0 +1,154 @@
+:root {
+  --primary-color: #003366;
+  --accent-color: #f9a825;
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 0;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: white;
+  color: var(--primary-color);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.section h2 {
+  cursor: pointer;
+  color: var(--primary-color);
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #eef2f3;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.section h2:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.content {
+  display: none;
+  margin-top: 10px;
+  padding-left: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.apply-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: var(--accent-color);
+}
+
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.chatbot-window {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+#chat-messages {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  direction: rtl;
+}
+
+#chat-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+  margin: 0 10px;
+}

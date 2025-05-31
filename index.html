@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>فيكسور | خدمات الطلاب</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- زر تبديل اللغة -->
+  <button class="lang-switch" onclick="toggleLang()">English</button>
+
+  <!-- القسم العلوي -->
+  <header>
+    <h1>مرحباً بك في فيكسور</h1>
+    <p>خدمات الطلاب في تركيا والصين</p>
+    <nav>
+      <a onclick="toggleSection('about')">من نحن؟</a> |
+      <a onclick="toggleSection('turkey')">تركيا</a> |
+      <a onclick="toggleSection('china')">الصين</a> |
+      <a onclick="toggleSection('agent')">كن وكيلًا</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- قسم من نحن -->
+    <div class="section" id="about">
+      <h2 onclick="toggleContent('about-content')">من نحن؟ ▾</h2>
+      <div class="content" id="about-content">
+        <p>
+          فيكسور هي منصة تساعد الطلاب الدوليين في تقديم الخدمات التعليمية والإدارية في تركيا والصين.
+          نوفر لك كل ما تحتاجه لتبدأ رحلتك الدراسية بسهولة وثقة.
+        </p>
+      </div>
+    </div>
+
+    <!-- قسم تركيا -->
+    <div class="section" id="turkey">
+      <h2 onclick="toggleContent('turkey-content')">خدمات تركيا ▾</h2>
+      <div class="content" id="turkey-content">
+        <p>
+          نساعدك في التقديم الجامعي، استخراج التأشيرات، السكن، والتأمين الصحي في تركيا.
+        </p>
+        <a href="#" class="apply-button">قدم الآن لتركيا</a>
+      </div>
+    </div>
+
+    <!-- قسم الصين -->
+    <div class="section" id="china">
+      <h2 onclick="toggleContent('china-content')">خدمات الصين ▾</h2>
+      <div class="content" id="china-content">
+        <p>
+          نساعدك في التقديم الجامعي، استخراج التأشيرات، السكن، والتأمين الصحي في الصين.
+        </p>
+        <a href="#" class="apply-button">قدم الآن للصين</a>
+      </div>
+    </div>
+
+    <!-- قسم الوكلاء -->
+    <div class="section" id="agent">
+      <h2 onclick="toggleContent('agent-content')">كن وكيلًا ▾</h2>
+      <div class="content" id="agent-content">
+        <p>
+          انضم إلى شبكة فيكسور العالمية، وساعد الطلاب في التقديم للجامعات التركية والصينية، واحصل على عمولة لكل طلب.
+        </p>
+        <a href="#" class="apply-button">سجل كوكيل الآن</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- شات بوت -->
+  <div class="chatbot">
+    <button id="chatbot-btn">💬 المساعد الذكي</button>
+    <div id="chatbot-window" class="chatbot-window">
+      <div class="chat-header">
+        <span>فيكسور - المساعد الذكي</span>
+        <button id="close-chat" style="float:right; background:none; border:none;">❌</button>
+      </div>
+      <div id="chat-messages"></div>
+      <input type="text" id="chat-input" placeholder="اكتب سؤالك هنا..." />
+    </div>
+  </div>
+
+  <!-- تذييل الصفحة -->
+  <footer>
+    <p>© 2025 فيكسور. جميع الحقوق محفوظة.</p>
+    <p>
+      <a href="https://instagram.com/vexor.study"  target="_blank">Instagram</a> |
+      <a href="https://facebook.com/vexor.study"  target="_blank">Facebook</a> |
+      <a href="https://wa.me/966501234567"  target="_blank">WhatsApp</a> |
+      <a href="https://t.me/vexorstudy"  target="_blank">Telegram</a>
+    </p>
+  </footer>
+
+  <!-- جافا سكريبت -->
+  <script src="script.js"></script>
+
+</body>
+</html>
